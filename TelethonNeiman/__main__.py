@@ -61,7 +61,7 @@ async def start_Neimanbot():
         Config.BOT_USERNAME = f"@{tbot_id.username}"
         Neiman.tgbot = NeimanBot
         LOGS.info("••• Starting NeimanBot (TELETHON) •••")
-        C1 = await hells(Config.NEIMANBOT_SESSION, Hell, "NEIMANBOT_SESSION")
+        C1 = await hells(Config.NEIMANBOT_SESSION, Neiman, "NEIMANBOT_SESSION")
         C2 = await hells(Config.SESSION_2, H2, "SESSION_2")
         C3 = await hells(Config.SESSION_3, H3, "SESSION_3")
         C4 = await hells(Config.SESSION_4, H4, "SESSION_4")
