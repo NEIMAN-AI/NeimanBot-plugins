@@ -22,7 +22,7 @@ else:
     session = "neimanbot"
 
 try:
-    Hell = TelegramClient(
+    Neiman = TelegramClient(
         session=session,
         api_id=Config.APP_ID,
         api_hash=Config.API_HASH,
