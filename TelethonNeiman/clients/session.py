@@ -17,7 +17,7 @@ def validate_session(session):
 
 
 if Config.NEIMANBOT_SESSION:
-    session = StringSession(validate_session(Config.NEIAMNBOT_SESSION))
+    session = StringSession(validate_session(Config.NEIMANBOT_SESSION))
 else:
     session = "neimanbot"
 
