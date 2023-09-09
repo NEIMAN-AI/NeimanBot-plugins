@@ -46,7 +46,7 @@ async def plug_load(path):
 async def neiman_is_on(total):
     await update_sudo()
     await logger_check(Neiman)
-    await start_msg(NeiamnBot, NEIMAN_PIC, __hellver__, total)
+    await start_msg(NeimanBot, NEIMAN_PIC, __hellver__, total)
     await join_it(Neiman)
     await join_it(H2)
     await join_it(H3)
