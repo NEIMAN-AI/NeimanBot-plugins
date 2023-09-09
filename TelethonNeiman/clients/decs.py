@@ -83,7 +83,7 @@ def neiman_cmd(
                         **args, from_users=sudo_user, pattern=sudo_reg
                     ),
                 )
-           Neiman.add_event_handler(
+            Neiman.add_event_handler(
                 func, events.NewMessage(**args, from_users=sudo_user, pattern=sudo_reg)
             )
         if H2:
