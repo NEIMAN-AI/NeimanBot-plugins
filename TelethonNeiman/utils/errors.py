@@ -5,7 +5,7 @@ import traceback
 from time import gmtime, strftime
 
 
-# this shit handles errors
+
 def errors_handler(func):
     async def wrapper(errors):
         try:
