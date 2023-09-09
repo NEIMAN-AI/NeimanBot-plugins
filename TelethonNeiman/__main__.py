@@ -12,11 +12,11 @@ from TelethonNeiman.utils.startup import (join_it, logger_check, start_msg,
                                         update_sudo)
 from TelethonNeiman.version import __hellver__
 
-# Global Variables #
+
 NEIMAN_PIC = "https://te.legra.ph/file/e79e58a483488e23ae815.jpg"
 
 
-# Client Starter
+
 async def hells(session=None, client=None, session_name="Main"):
     num = 0
     if session:
@@ -29,7 +29,7 @@ async def hells(session=None, client=None, session_name="Main"):
     return num
 
 
-# Load plugins based on config UNLOAD
+
 async def plug_load(path):
     files = glob.glob(path)
     for name in files:
@@ -42,7 +42,7 @@ async def plug_load(path):
                 load_module(shortname.replace(".py", ""))
 
 
-# Final checks after startup
+
 async def neiman_is_on(total):
     await update_sudo()
     await logger_check(Neiman)
@@ -54,7 +54,7 @@ async def neiman_is_on(total):
     await join_it(H5)
 
 
-# Neimanbot starter...
+
 async def start_Neimanbot():
     try:
         tbot_id = await NeimanBot.get_me()
