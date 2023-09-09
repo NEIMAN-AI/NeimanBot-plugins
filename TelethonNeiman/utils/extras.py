@@ -6,7 +6,7 @@ from NeimanConfig import Config
 from TelethonNeiman.helpers.pasters import pasty
 
 
-# either edit or reply that msg
+
 async def edit_or_reply(
     event,
     text,
@@ -64,7 +64,7 @@ async def edit_or_reply(
     os.remove(file_name)
 
 
-# delete timeout
+
 async def delete_neiman(event, text, time=None, parse_mode=None, link_preview=None):
     parse_mode = parse_mode or "md"
     link_preview = link_preview or False
