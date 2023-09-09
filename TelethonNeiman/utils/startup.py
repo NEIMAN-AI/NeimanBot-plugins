@@ -8,13 +8,13 @@ from TelethonNeiman.helpers.int_str import make_int
 from TelethonNeiman.version import __telever__
 
 
-# Creates the logger group on first deploy and adds the helper bot
+
 async def logger_id(client):
-    desc = "A Bot Logger Group For Neimanbot. DO NOT LEAVE THIS GROUP!!"
+    desc = "α вσт ℓσggєя gяσυρ fσя иєιмαивσт. ∂σ иσт ℓєανє тнιѕ gяσυρ !!"
     try:
         grp = await client(
             functions.channels.CreateChannelRequest(
-                title="Neimanbot Logger", about=desc, megagroup=True
+                title="𝗡𝗲𝗶𝗺𝗮𝗻𝗕𝗼𝘁 𝗟𝗼𝗴𝗴𝗲𝗿 ", about=desc, megagroup=True
             )
         )
         grp_id = grp.chats[0].id
@@ -52,7 +52,7 @@ async def logger_id(client):
     return grp_id
 
 
-# Updates sudo cache on every restart
+
 async def update_sudo():
     Sudo = Config.SUDO_USERS
     sudo = gvarstat("SUDO_USERS")
@@ -62,7 +62,7 @@ async def update_sudo():
             Sudo.append(x)
 
 
-# Checks for logger group.
+
 async def logger_check(bot):
     if Config.LOGGER_ID == 0:
         if gvarstat("LOGGER_ID") is None:
@@ -72,29 +72,27 @@ async def logger_check(bot):
         Config.LOGGER_ID = int(gvarstat("LOGGER_ID"))
 
 
-# Sends the startup message to logger group
 async def start_msg(client, pic, version, total):
     is_sudo = "True" if Config.SUDO_USERS else "False"
     text = f"""
-#START
+ɴᴇɪᴍᴀɴʙᴏᴛ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴛᴇᴀᴍ ɴᴇɪᴍᴀɴ
 
-<b><i>Version:</b></i> <code>{version}</code>
-<b><i>Clients:</b></i> <code>{str(total)}</code>
-<b><i>Sudo:</b></i> <code>{is_sudo}</code>
-<b><i>Library:</b></i> <code>Telethon - {__telever__}</code>
+<b><i>νєяѕισи:</b></i> <code>{version}</code>
+<b><i>ѕυ∂σ:</b></i> <code>{is_sudo}</code>
+<b><i>ƈℓιєитѕ:</b></i> <code>{str(total)}</code>
+<b><i>ℓιвяαяу:</b></i> <code>ᴛᴇʟᴇᴛʜᴏɴ - {__telever__}</code>
 
-<b><i>»» <u><a href='https://t.me/TeamNeiman'>†hê иღιмαив♡т</a></u> ««</i></b>
+<b><i>»» <u><a href='https://t.me/TeamNeiman'>иღιмαив♡т</a></u> ««</i></b>
 """
     await client.send_file(
         Config.LOGGER_ID,
         pic,
         caption=text,
         parse_mode="HTML",
-        buttons=[[Button.url("NeimanBot Network", "https://t.me/Neiman_X_World")]],
+        buttons=[[Button.url("ᴛᴇᴀᴍ ɴᴇɪᴍᴀɴ ", "https://t.me/TeamNeiman")]],
     )
 
 
-# Joins the Neimanbot chat and channel from all clients
 async def join_it(client):
     if client:
         try:
