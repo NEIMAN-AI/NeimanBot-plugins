@@ -81,7 +81,7 @@ async def start_Neimanbot():
         sys.exit()
 
 
-Neiman.loop.run_until_complete(start_neimanbot())
+Neiman.loop.run_until_complete(start_Neimanbot())
 
 if len(sys.argv) not in (1, 3, 4):
     Neiman.disconnect()
