@@ -1,7 +1,7 @@
 from NeimanConfig import Config, db_config, os_config
 from TelethonNeiman.clients.client_list import (client_id, clients_list,
                                               get_user_id)
-from TelethonNeiman.clients.decs import neimam_cmd, neiman_handler
+from TelethonNeiman.clients.decs import neiman_cmd, neiman_handler
 from TelethonNeiman.clients.instaAPI import InstaGram
 from TelethonNeiman.clients.logger import LOGGER
 from TelethonNeiman.clients.session import (H2, H3, H4, H5, Neiman, NeimanBot,
