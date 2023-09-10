@@ -212,7 +212,7 @@ RAID_STR = [
 que = {}
 
 
-@hell_handler()
+@neiman_handler()
 async def _(event):
     global que
     queue = que.get(event.sender_id)
@@ -227,7 +227,7 @@ async def _(event):
             reply_to=event.message.id,
         )
 
-@hell_cmd(pattern="rreplyraid(?:\s|$)([\s\S]*)")
+@neiman_cmd(pattern="rreplyraid(?:\s|$)([\s\S]*)")
 async def _(event):
     global que
     if event.fwd_from:
@@ -258,7 +258,7 @@ async def _(event):
         await event.edit(f"{username} 𝗛𝗶𝘀/𝗛𝗲𝗿 𝗠𝗼𝘁𝗵𝗲𝗿 𝗪𝗶𝗹𝗹 𝗕𝗲 𝗙𝘂𝗺𝗸𝗲𝗱 𝗡𝗼𝘄 😉")
 
 
-@hell_cmd(pattern="drreplyraid(?:\s|$)([\s\S]*)")
+@neiman_cmd(pattern="drreplyraid(?:\s|$)([\s\S]*)")
 async def _(event):
     global que
     if event.fwd_from:
