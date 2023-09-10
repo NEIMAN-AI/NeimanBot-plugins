@@ -4,7 +4,7 @@ from . import *
 
 from telethon.errors import ChatSendInlineForbiddenError as noin
 from telethon.errors.rpcerrorlist import BotMethodInvalidError as dedbot
-from TelethonHell.DB.gvar_sql import gvarstat, addgvar
+from TelethonNeiman.DB.gvar_sql import gvarstat, addgvar
 from TelethonNeiman.plugins import *
 
 RAID_STR = [
