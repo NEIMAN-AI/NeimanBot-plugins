@@ -216,7 +216,7 @@ RAID_STR = [
 que = {}
 
 
-@neimam_cmd()
+@neiman_cmd()
 async def _(event):
     global que
     queue = que.get(event.sender_id)
