@@ -11,26 +11,18 @@ from TelethonNeiman.plugins import *
 # -------------------------------------------------------------------------------
 
 ALIVE_TEMP = """
-<b><i>🔥🔥иღιмαив♡т ɨs օռʟɨռɛ🔥🔥</i></b>
-<b><i>↼ Øwñêr ⇀</i></b> : 『 {neiman_mention} 』
-╭──────────────
-┣─ <b>» Telethon:</b> <i>{telethon_version}</i>
-┣─ <b>» иღιмαив♡т:</b> <i>{neimanbot_version}</i>
-┣─ <b>» Sudo:</b> <i>{is_sudo}</i>
-┣─ <b>» Uptime:</b> <i>{uptime}</i>
-┣─ <b>» Ping:</b> <i>{ping}</i>
-╰──────────────
-<b><i>»»» <a href='https://t.me/TeamNeiman'>[иღιмαив♡т]</a> «««</i></b>
-"""
-
-msg = """{}\n
-<b><i>🏅 𝙱𝚘𝚝 𝚂𝚝𝚊𝚝𝚞𝚜 🏅</b></i>
-<b>Telethon ≈</b>  <i>{}</i>
-<b>иღιмαив♡т ≈</b>  <i>{}</i>
-<b>Uptime ≈</b>  <i>{}</i>
-<b>Abuse ≈</b>  <i>{}</i>
-<b>Sudo ≈</b>  <i>{}</i>
-"""
+<b><i>⚡ɴᴇɪᴍᴀɴ ɪs ᴏɴʟɪɴᴇ ⚡</i></b>
+<b><i>↼ σωиєя ⇀</i></b> : 『 {neiman_mention} 』
+╔═══❰𝗡𝗲𝗶𝗺𝗮𝗻𝗕𝗼𝘁❱═══╗
+║
+┣⪼<b>» υρтιмє:</b> <i>{uptime}</i>
+┣⪼<b>» ѕυ∂σ:</b> <i>{is_sudo}</i>
+┣⪼<b>» иღιмαив♡т:</b> <i>{neimanbot_version}</i>
+┣⪼<b>» тєℓєтнσи:</b> <i>{telethon_version}</i>
+║╔═════════╗
+║   <b><i>『<a href='https://t.me/TeamNeiman'>[𝗧𝗲𝗮𝗺𝗡𝗲𝗶𝗺𝗮𝗻]</a> 』</i></b>
+║╚═════════╝
+╚══════════════╝"""
 # -------------------------------------------------------------------------------
 
 
@@ -53,7 +45,6 @@ async def _(event):
     userid, neiman_user, neiman_mention = await client_id(event, is_html=True)
     neiman = await eor(event, "`Building Alive....`")
     reply = await event.get_reply_message()
-    uptime = await get_time((time.time() - StartTime))
     name = gvarstat("ALIVE_NAME") or neiman_user
     alive_temp = gvarstat("ALIVE_TEMPLATE") or ALIVE_TEMP
     a = gvarstat("ALIVE_PIC")
@@ -65,7 +56,7 @@ async def _(event):
                 pic_list.append(c)
         PIC = random.choice(pic_list)
     else:
-        PIC = "https://te.legra.ph/file/8338a235da86c7456b92d.mp4"
+        PIC = "https://te.legra.ph/file/de7d368b013727c198d65.jpg"
     end = datetime.datetime.now()
     ping = (end - start).microseconds / 1000
     alive = alive_temp.format(
@@ -86,7 +77,7 @@ async def _(event):
     await neiman.delete()
 
 
-@neiman_cmd(pattern="hell$")
+@neiman_cmd(pattern="neiman$")
 async def neiman_a(event):
     userid, _, _ = await client_id(event)
     uptime = await get_time((time.time() - StartTime))
