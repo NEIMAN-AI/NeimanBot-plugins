@@ -1,47 +1,47 @@
-from HellConfig import Config, db_config, os_config
-from TelethonHell.clients.client_list import (client_id, clients_list,
+from NeimanConfig import Config, db_config, os_config
+from TelethonNeiman.clients.client_list import (client_id, clients_list,
                                               get_user_id)
-from TelethonHell.clients.decs import hell_cmd, hell_handler
-from TelethonHell.clients.instaAPI import InstaGram
-from TelethonHell.clients.logger import LOGGER
-from TelethonHell.clients.session import (H2, H3, H4, H5, Hell, HellBot,
+from TelethonNeiman.clients.decs import neimam_cmd, neiman_handler
+from TelethonNeiman.clients.instaAPI import InstaGram
+from TelethonNeiman.clients.logger import LOGGER
+from TelethonNeiman.clients.session import (H2, H3, H4, H5, Neiman, NeimanBot,
                                           validate_session)
-from TelethonHell.DB import gvar_sql
-from TelethonHell.helpers.anime import *
-from TelethonHell.helpers.classes import *
-from TelethonHell.helpers.convert import *
-from TelethonHell.helpers.exceptions import *
-from TelethonHell.helpers.formats import *
-from TelethonHell.helpers.gdriver import *
-from TelethonHell.helpers.google import *
-from TelethonHell.helpers.ig_helper import *
-from TelethonHell.utils.startup import *
-from TelethonHell.version import __hellver__, __telever__
+from TelethonNeiman.DB import gvar_sql
+from TelethonNeiman.helpers.anime import *
+from TelethonNeiman.helpers.classes import *
+from TelethonNeiman.helpers.convert import *
+from TelethonNeiman.helpers.exceptions import *
+from TelethonNeiman.helpers.formats import *
+from TelethonNeiman.helpers.gdriver import *
+from TelethonNeiman.helpers.google import *
+from TelethonNeiman.helpers.ig_helper import *
+from TelethonNeiman.utils.startup import *
+from TelethonNeiman.version import __hellver__, __telever__
 
 
-hell_logo = "./HellConfig/resources/pics/hellbot_logo.jpg"
+neiman_logo = "./NeimanConfig/resources/pics/neimanbot_logo.jpg"
 
 
 
-hell_emoji = Config.EMOJI_IN_HELP
+neiman_emoji = Config.EMOJI_IN_HELP
 hl = Config.HANDLER
 shl = Config.SUDO_HANDLER
-hellbot_version = __hellver__
+neimanbot_version = __hellver__
 telethon_version = __telever__
 abuse_m = "Enabled" if str(Config.ABUSE).lower() in enabled_list else "Disabled"
 is_sudo = "True" if gvar_sql.gvarstat("SUDO_USERS") else "False"
 
-my_channel = Config.MY_CHANNEL or "Its_HellBot"
-my_group = Config.MY_GROUP or "HellBot_Chat"
+my_channel = Config.MY_CHANNEL or "TeamNeiman"
+my_group = Config.MY_GROUP or "Neiman_X_Support"
 if "@" in my_channel:
     my_channel = my_channel.replace("@", "")
 if "@" in my_group:
     my_group = my_group.replace("@", "")
 
-chnl_link = "https://t.me/its_hellbot"
-grp_link = "https://t.me/HellBot_Chat"
-hell_channel = f"[†hê Hêllẞø†]({chnl_link})"
-hell_grp = f"[Hêllẞø† Group]({grp_link})"
+chnl_link = "https://t.me/TeamNeiman"
+grp_link = "https://t.me/Neiman_X_Support"
+neiman_channel = f"[иєιмαивσт]({chnl_link})"
+neiman_grp = f"[тєαм иєιмαи]({grp_link})"
 
 WELCOME_FORMAT = """**Use these fomats in your welcome note to make them attractive.**
   {count} : To get group members
