@@ -82,7 +82,7 @@ async def start_msg(client, pic, version, total):
 <b><i>ƈℓιєитѕ:</b></i> <code>{str(total)}</code>
 <b><i>ℓιвяαяу:</b></i> <code>ᴛᴇʟᴇᴛʜᴏɴ - {__telever__}</code>
 
-<b><i>»» <u><a href='https://t.me/TeamNeiman'>иღιмαив♡т</a></u> ««</i></b>
+<b><i>⚡ <u><a href='https://t.me/TeamNeiman'>иღιмαив♡т</a></u> ⚡⚡</i></b>
 """
     await client.send_file(
         Config.LOGGER_ID,
